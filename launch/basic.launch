@@ -1,0 +1,13 @@
+<!-- This launches the altimeter node and provides access to the private parameters -->
+<launch>
+  
+  <arg name="truth_topic" default="truth" />
+  <arg name="alt_topic" default="alt_msgs" /> 
+  
+  <node name="alt_sim" pkg="alt_sim" type="alt_sim_node" >
+  	<remap from="truth" to="$(arg truth_topic)"/>
+  	<remap from="alt_msgs" to="$(arg alt_topic)"/>
+  </node>
+  
+  
+</launch>
