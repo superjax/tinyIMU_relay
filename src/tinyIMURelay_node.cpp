@@ -10,6 +10,8 @@
 
 int main(int argc, char** argv)
 {
+    bool scale;
+
     ros::init(argc, argv, "tinyIMURelay");
     ros::NodeHandle n;
 

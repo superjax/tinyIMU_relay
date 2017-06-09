@@ -31,6 +31,7 @@ private:
   ros::NodeHandle nh_;            //!< public node handle for subscribing, publishing, etc.
   ros::NodeHandle nh_private_;    //!< private node handle for pulling parameter values from the parameter server
 
+  bool scale_; // if it is true, the raw values from MPU6050 are scaled down to m/s^2 and rad/s
   /*!
    *  \brief This function is a timer callback.  It brings in the raw data, extracts the height, and publishes it over ROS
    *
